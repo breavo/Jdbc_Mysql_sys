@@ -2,7 +2,8 @@ package com.project.model;
 
 import java.util.Date;
 
-public class overWatcher {
+public class overWatcher 
+{
 	private Integer id;
 	private String user_name;
 	private Integer sex;

@@ -9,25 +9,26 @@ import java.sql.ResultSet;
 */
 
 
-public class DBUtil {
+public class DBUtil 
+{
+	private static final String 	URL 	 = "jdbc:mysql://127.0.0.1:3306/jdbc_connection";
+	private static final String 	NAME 	 = "root";
+	private static final String 	PASSWORD = "6664265ch";
+	private static  	 Connection conn 	 = null;  		//申明数据库连接接口
 	
-	private static final String URL = "jdbc:mysql://127.0.0.1:3306/jdbc_connection";
-	private static final String NAME = "root";
-	private static final String PASSWORD = "6664265ch";
-	
-	private static  Connection conn = null;  //申明数据库连接接口
-	
-	static{//静态代码块
-		try {
+	static
+	{//静态代码块
+		try 
+		{
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection(URL,NAME,PASSWORD);
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+			conn = DriverManager.getConnection(URL, NAME, PASSWORD);
+		} 
+		catch (ClassNotFoundException e)  {	 e.printStackTrace();	}
+		catch (SQLException e)			  {	 e.printStackTrace();	}
 	}
-	public static Connection getConnection() {
+	
+	public static Connection getConnection() 
+	{
 		return conn;
 	}
 

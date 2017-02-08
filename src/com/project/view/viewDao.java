@@ -7,26 +7,28 @@ import java.util.List;
 import com.project.action.overWatchAction;
 import com.project.model.overWatcher;
 
-public class viewDao {
-	
+public class viewDao 
+{
 	overWatchAction action = new overWatchAction();
 	
-	public void returnToMenu() {	
+	public void returnToMenu() 
+	{	
 			System.out.println("返回主菜单");
-			System.out.println( view.CONTEXT);
+			System.out.println(view.CONTEXT);
 	}
 	
-	public void exitMenu() {	
+	public void exitMenu()
+	{	
 		System.out.println("退出成功");
 		return;
 	}
 	
-	public void query() throws Exception {
+	public void query() throws Exception
+	{
 		List<overWatcher> gall = new ArrayList<overWatcher>();
 		gall = action.query();
-		for (overWatcher goddess : gall) {
+		for (overWatcher goddess : gall) 
 			System.out.println(goddess.getId() + "," + goddess.getUser_name() + "," + goddess.getAge());
-		}		
 	}
 /*
 	public void getSpecial(int step,String content,String previous) throws Exception {

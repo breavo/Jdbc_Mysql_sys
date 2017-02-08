@@ -7,37 +7,43 @@ import java.util.Map;
 import com.project.Dao.OwDao;
 import com.project.model.overWatcher;
 
-public class overWatchAction {
-	
-	public void add(overWatcher goddess) throws Exception{
+public class overWatchAction 
+{
+	public void add(overWatcher goddess) throws Exception
+	{
 		OwDao gDao = new OwDao();
 		gDao.addGoddess(goddess);
 	}
 	
-	public void edit(overWatcher goddess) throws Exception {
+	public void edit(overWatcher goddess) throws Exception 
+	{
 		OwDao gDao = new OwDao();
 		gDao.updateGoddess(goddess);
 	}
 	
-	public void del(Integer id)throws Exception {
+	public void del(Integer id)throws Exception 
+	{
 		OwDao gDao = new OwDao();
 		gDao.delGoddess(id);
 	}
 	
-	public List<overWatcher> query() throws Exception {
-		OwDao gDao = new OwDao();
-		List<overWatcher> qg = gDao.Query();
+	public List<overWatcher> query() throws Exception 
+	{
+		OwDao 			  gDao = new OwDao();
+		List<overWatcher> qg   = gDao.Query();
 		return qg;
 	}
 	
-	public List<overWatcher> query(List<Map<String, Object>> param) throws Exception {
-		OwDao gDao = new OwDao();
-		List<overWatcher> qg =gDao.Query(param);
+	public List<overWatcher> query(List<Map<String, Object>> param) throws Exception
+	{
+		OwDao 			  gDao = new OwDao();
+		List<overWatcher> qg   = gDao.Query(param);
 		return qg;
 	}
 	
-	public overWatcher getone(Integer id) throws Exception {
-		OwDao gDao = new OwDao();
+	public overWatcher getone(Integer id) throws Exception
+	{
+		OwDao 		gDao   = new OwDao();
 		overWatcher getone = gDao.getoneGoddness(id);
 		return getone;
 	}
